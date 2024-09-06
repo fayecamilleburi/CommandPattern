@@ -12,10 +12,12 @@ public class ViewerApp {
 
         // TV Command
         PowerOn powerOn = new PowerOn(tv);
-        System.out.println(powerOn.execute());
+        rc.setCommand(powerOn);
+        rc.clickButton();
 
         PowerOff powerOff = new PowerOff(tv);
-        System.out.println(powerOff.execute());
+        rc.setCommand(powerOff);
+        rc.clickButton();
 
         // Lights Command
         TurnOn turnOnLights = new TurnOn(light);
